@@ -25,6 +25,7 @@ The firmware runs on **two microcontrollers** that share one repository and one 
 - [Configuration Reference](#configuration-reference)
 - [Troubleshooting](#troubleshooting)
 - [Design Notes and Limitations](#design-notes-and-limitations)
+- [Contributors](#contributors)
 - [License](#license)
 
 ---
@@ -390,6 +391,12 @@ Everything tunable lives in [include/config.h](./include/config.h), split into o
 - **One-way trigger.** The camera node does not report success back to the servo node; the request line is a request, not a handshake. The result is visible in the camera node's serial log and in whatever reached Telegram/SD.
 - **`setInsecure()` is used for TLS.** Certificate pinning needs a valid clock, which this board does not have. The traffic is still encrypted; the certificate simply is not validated.
 - **The ESP32 is 2.4 GHz only.** SSIDs on the 5 GHz band will never connect.
+
+---
+
+## Contributors
+
+- **Abdullateef** ([`aBDULLATEEF1247`](https://github.com/aBDULLATEEF1247)) — ESP32-CAM firmware, micro-SD storage handler, and Telegram bot pipeline.
 
 ---
 
